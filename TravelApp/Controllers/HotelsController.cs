@@ -21,10 +21,9 @@ namespace TravelApp.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<Hotel?> GetAllHotel(int id)
+        public async Task<Hotel> GetAllHotel(int id)
         {
-            var hotel = await _hotelService.GetHotel(id);
-            return hotel;
+            return await _hotelService.GetHotel(id);
         }
 
         [HttpPost("Create")]

@@ -54,10 +54,10 @@ namespace DAL.Services
             return hotels;
         }
 
-        public Task<Hotel?> GetHotel(int id)
+        public Task<Hotel> GetHotel(int id)
         {
             var hotels = GetHotels();
-            Hotel? result = null;
+            Hotel result = null;
             foreach (var hotel in hotels)
             {
                 if (hotel.Id == id)
@@ -67,7 +67,7 @@ namespace DAL.Services
                 }
             }
 
-            return Task.FromResult<Hotel?>(result);
+            return Task.FromResult<Hotel>(result);
         }
 
         public Task<IEnumerable<Hotel>> GetAllHotels()
