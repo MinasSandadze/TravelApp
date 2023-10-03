@@ -16,5 +16,6 @@ namespace DAL.Interfaces
         Task<bool> DeleteHotel(int Id);
 
         Task<IEnumerable<Hotel>> GetAllHotels();
+        Task<Hotel?> GetHotel(int id);
     }
 }

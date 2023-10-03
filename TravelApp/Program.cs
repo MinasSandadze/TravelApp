@@ -30,7 +30,7 @@ namespace TravelApp
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            // app.UseAuthorization();
 
             app.MapControllers();
 
